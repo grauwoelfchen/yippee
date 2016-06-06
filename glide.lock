@@ -1,0 +1,6 @@
+hash: cfffbf0767c74ae9c9c1decdbe8cd6d98717fb0ecf110447bea9fea7aa7b1562
+updated: 2016-05-25T18:16:13.204058273+09:00
+imports:
+- name: github.com/jung-kurt/gofpdf
+  version: 3cc1ba71da5643706c65aeb1483b021e7385bebe
+devImports: []
