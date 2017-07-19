@@ -2,8 +2,8 @@ package main
 
 import (
 	_ "fmt"
-	"path/filepath"
 	"log"
+	"path/filepath"
 
 	"github.com/jung-kurt/gofpdf"
 )
