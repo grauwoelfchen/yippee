@@ -1,5 +1,16 @@
 proj := "github.com/grauwoelfchen/yippee"
 
+vet:
+	@go vet ./*.go
+.PHONY: vet
+
+fmt:
+	@goimports -w $(shell glide novendor --no-subdir)
+.PHONY: fmt
+
+lint:
+	@golint -set_exit_status *.go
+
 test:
 	@go test ${proj}/cmd -v parallel 3;
 	@go test ${proj} -v parallel 3;
