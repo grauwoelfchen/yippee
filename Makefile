@@ -1,4 +1,4 @@
-proj := "github.com/grauwoelfchen/yippee"
+proj := "gitlab.com/grauwoelfchen/yippee"
 
 vet:
 	@go vet ./*.go
