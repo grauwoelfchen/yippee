@@ -1,19 +1,18 @@
 proj := "gitlab.com/grauwoelfchen/yippee"
 
 vet:
-	@go vet ./*.go
+	@go vet ./**/*.go
 .PHONY: vet
 
 fmt:
-	@goimports -w $(shell glide novendor --no-subdir)
+	@goimports -w ./*.go ./cmd/
 .PHONY: fmt
 
 lint:
-	@golint -set_exit_status *.go
+	@golint -set_exit_status main*.go ./cmd/*.go
 
 test:
-	@go test ${proj}/cmd -v parallel 3;
-	@go test ${proj} -v parallel 3;
+	@go test $(shell glide novendor) -v parallel 3;
 .PHONY: test
 
 build:
