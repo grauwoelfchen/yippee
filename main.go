@@ -17,7 +17,8 @@ func main() {
 	// Header
 	pdf.SetHeaderFunc(func() {
 		pdf.SetFont("Arial", "B", 14)
-		pdf.Image(filepath.Join("./", "logo.png"), 10, 6, 30, 0, false , "", 0, "")
+		pdf.Image(filepath.Join("./src", "logo.png"),
+			10, 6, 30, 0, false, "", 0, "")
 		pdf.SetY(5)
 		//pdf.Ln()
 	})
